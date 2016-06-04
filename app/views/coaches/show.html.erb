@@ -1,0 +1,14 @@
+<h1>
+  Profile for Coach: <%= "#{@coach.full_name}" %>
+</h1>
+
+<p>
+  <%= link_to "Update profile for #{@coach.full_name}", edit_coach_path(@coach) %>
+</p>
+
+<p>
+  <%= link_to "Add a review for #{@coach.full_name}" %>
+</p>
+<p>
+  <%= link_to "Back to coach list", coaches_path %>
+</p>

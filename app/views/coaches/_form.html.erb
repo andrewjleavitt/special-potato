@@ -1,0 +1,32 @@
+<%= form_for @coach do |f| %>
+
+    <% if @coach.errors.any? %>
+        <div class="error_explanation">
+          <h2>
+            <%= pluralize(@coach.errors.count, "error") %> prohibited
+            this coach from being saved:
+          </h2>
+          <ul>
+            <% @coach.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+
+
+    <p>
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name %>
+    </p>
+
+    <p>
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

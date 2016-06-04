@@ -1,0 +1,9 @@
+<h1>List of Coaches</h1>
+<%= link_to 'Add Coach', new_coach_path %>
+<% @coaches.each do |coach| %>
+<li>
+  <%= coach.full_name %>
+  <%= link_to "show", coach_path(coach) %>
+  <%= link_to "edit", edit_coach_path(coach) %>
+</li>
+<% end %>
