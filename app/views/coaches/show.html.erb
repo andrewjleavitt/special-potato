@@ -2,10 +2,18 @@
   Profile for Coach: <%= "#{@coach.full_name}" %>
 </h1>
 
+<h2>
+  Reviews
+</h2>
+<%= render @coach.reviews %>
+
+<h2>Add a review:</h2>
+<%= render 'reviews/form' %>
+
+
 <p>
   <%= link_to "Update profile for #{@coach.full_name}", edit_coach_path(@coach) %>
 </p>
-
 <p>
   <%= link_to "Add a review for #{@coach.full_name}" %>
 </p>
