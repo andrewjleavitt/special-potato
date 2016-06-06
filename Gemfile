@@ -14,13 +14,14 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-gem 'unicorn'
+gem 'puma'
 
 gem 'rails_12factor'
 
 # Use Capistrano for deployment
 gem 'capistrano-rails', group: :development
+
+gem 'pusher'
 
 group :development do
   gem 'spring'
