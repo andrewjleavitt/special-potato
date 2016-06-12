@@ -1,5 +1,7 @@
 class Coach < ActiveRecord::Base
 
+  has_secure_password
+
   has_many :reviews
 
   validates :first_name, presence: true

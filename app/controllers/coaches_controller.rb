@@ -38,6 +38,11 @@ class CoachesController < ActionController::Base
   private
 
   def coach_params
-    params.require(:coach).permit(:first_name, :last_name)
+    params.require(:coach).permit(
+        :first_name,
+        :last_name,
+        :email,
+        :password,
+        :password_confirmation)
   end
 end
