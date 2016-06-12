@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  resources :students
+
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
